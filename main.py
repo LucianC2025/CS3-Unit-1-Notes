@@ -38,8 +38,18 @@ def main():
     print("String literal",teacher)
     print(f"My age in 10 years: {age + 10}")
 
+    # Initialize args (arguments) for function
+    ingredients_list = ["chocolate chips", "cinnamon", "flour", "sugar", "butter", "eggs"]
+    snickerdoodle_instructions = "mix everything and put in oven"
+    temp = 300
+
+    # Call a function 
+    bake_cookie(ingredients_list, snickerdoodle_instructions, temp)
+
 def bake_cookie(ingredients, instructions, temperature):
     # Print the list of ingredients 
+    for ingred in ingredients:
+        print(ingred)
 
     # Print the oven temperature setting
      
