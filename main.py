@@ -61,10 +61,10 @@ def bake_cookie(ingredients, instructions, temperature, cookie_cutter="snowman")
         print(ingred)
 
     # Print the oven temperature setting/
-    print(f"Set the oven to {temperature} degrees Kelvin.", end="\n")
+    print(f"Set the oven to {temperature} degrees Kelvin.", end="\n\n")
 
     # Print the instructions
-    print(instructions, end="\n")
+    print(instructions, end="\n\n")
 
     # Tell them which cookie cutter to use
     print(f"Now cut your cookies with a {cookie_cutter} cookie cutter")
