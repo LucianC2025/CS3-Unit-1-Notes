@@ -39,23 +39,35 @@ def main():
     print(f"My age in 10 years: {age + 10}")
 
     # Initialize args (arguments) for function
-    ingredients_list = ["chocolate chips", "cinnamon", "flour", "sugar", "butter", "eggs"]
-    snickerdoodle_instructions = "mix everything and put in oven"
+    ingredients_list = ["- chocolate chips", "- cinnamon", "- flour", "- sugar", "- butter", "- eggs"]
+    snickerdoodle_instructions = "Instructions: Gently beat the butter and eggs together. Seperately mix the flour, cinnamon and sugar. Next, combine the two mixtures and add chocolate chip cookies. Form into balls and place onto a baking tray. Put cookies into oven (with gloves ofc)"
     temp = 300
 
     # Call a function 
     bake_cookie(ingredients_list, snickerdoodle_instructions, temp)
 
-def bake_cookie(ingredients, instructions, temperature):
+    # Call a function with an optional argument
+    bake_cookie(ingredients_list, snickerdoodle_instructions, temp, cookie_cutter="teddybear")
+
+
+
+def bake_cookie(ingredients, instructions, temperature, cookie_cutter="snowman"): # Optional requirments have to come AFTER the required requirments
+    print()
+    print("***Snickerdoodle Recipie****")
+    print()
     # Print the list of ingredients 
+    print("List of Ingredients:")
     for ingred in ingredients:
         print(ingred)
 
-    # Print the oven temperature setting
-     
+    # Print the oven temperature setting/
+    print(f"Set the oven to {temperature} degrees Kelvin.", end="\n")
 
     # Print the instructions
-    print(instructions)
+    print(instructions, end="\n")
+
+    # Tell them which cookie cutter to use
+    print(f"Now cut your cookies with a {cookie_cutter} cookie cutter")
 
 if __name__ == "__main__":
     main()
