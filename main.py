@@ -40,7 +40,7 @@ def main():
 
     # Initialize args (arguments) for function
     ingredients_list = ["- chocolate chips", "- cinnamon", "- flour", "- sugar", "- butter", "- eggs"]
-    snickerdoodle_instructions = "Instructions: Gently beat the butter and eggs together. Seperately mix the flour, cinnamon and sugar. Next, combine the two mixtures and add chocolate chip cookies. Form into balls and place onto a baking tray. Put cookies into oven (with gloves ofc)"
+    snickerdoodle_instructions = "* Instructions: Gently beat the butter and eggs together. Seperately mix the flour, cinnamon and sugar. Next, combine the two mixtures and add chocolate chip cookies. Form into balls and place onto a baking tray. Put cookies into oven (with gloves ofc)"
     temp = 300
 
     # Call a function 
@@ -49,25 +49,59 @@ def main():
     # Call a function with an optional argument
     bake_cookie(ingredients_list, snickerdoodle_instructions, temp, cookie_cutter="teddybear")
 
+    # Reviweing optional keyword arguments
+    print(calculate_numbers(2, 3)) # goes with default, "add"
+    # The next two lines both result in -1
+    print(calculate_numbers(2, 3, "subtract")) 
+    print(calculate_numbers(2, 3, operation = "subtract")) # if you specify keyword (specifiy which argument it is representing) the order wont matter
+
+    # Demonstrate modifying values while iterating
+    numbers = [5, 5, 6, 5.5, 7, 42, 70, "hi"]
+    # Note that you can mix different data types in the same list
+    list_iteration(numbers) 
 
 
-def bake_cookie(ingredients, instructions, temperature, cookie_cutter="snowman"): # Optional requirments have to come AFTER the required requirments
+ # Optional requirments have to come AFTER the required requirments
+def bake_cookie(ingredients, instructions, temperature, cookie_cutter="snowman"): 
     print()
     print("***Snickerdoodle Recipie****")
-    print()
     # Print the list of ingredients 
-    print("List of Ingredients:")
+    print("* List of Ingredients:")
     for ingred in ingredients:
         print(ingred)
 
     # Print the oven temperature setting/
-    print(f"Set the oven to {temperature} degrees Kelvin.", end="\n\n")
+    print(f"* Set the oven to {temperature} degrees Kelvin.")
 
     # Print the instructions
-    print(instructions, end="\n\n")
+    print(instructions)
 
     # Tell them which cookie cutter to use
-    print(f"Now cut your cookies with a {cookie_cutter} cookie cutter")
+    print(f"* Now cut your cookies with a {cookie_cutter} cookie cutter", end="\n\n")
+
+
+
+def calculate_numbers(x, y, operation="add"):  
+    # x and y are positional arguments and the order matters.
+    # operation="add" is a keyword argument and is optional.
+    if operation == "add":
+        return x + y
+    elif operation == "subtract": # elif means else if
+        return x - y
+
+# Different ways to modify values while iterating 
+def list_iteration(input_list): 
+    # 1. Create a new list as you loop
+    new_list = []
+    for item in input_list: 
+        # append means add to a list
+        new_list.append(item * 2)
+    print(new_list)
+
+    # 2. LIST COMPREHENSION
+    input_list = [item * 2 for item in input_list]
+    print(input_list)
+
 
 if __name__ == "__main__":
     main()
