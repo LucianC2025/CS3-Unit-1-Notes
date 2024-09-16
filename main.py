@@ -64,6 +64,51 @@ def main():
     # Note that you can mix different data types in the same list
     list_iteration(numbers) 
 
+    print("")
+
+    # Test different container types
+    list_demo()
+    tuple_demo()
+    set_demo()
+    dict_demo()
+
+
+def list_demo():
+    print("***LIST DEMO***")
+    my_list = ["h","e", "l", "l", "o"] # you can use either "" (double quotes) or '' (single quotes) - as long as you are consistent
+   
+    # Add an item to the list
+    my_list.append("!")
+    print(my_list) # Prints the entire list, exactly how it is written in code (except it prints single quotes instead of double quotes (what we used))
+    
+    # Get the number of items
+    print(len(my_list)) # len function gives the NUMBER of items
+
+    # Use index to access specific item
+    print(my_list[0]) # Prints h --> the item at index 0
+    print(my_list[4:6]) # Prints ['o', '!'] --> item at index 4 INCLUSIVE to 6 NON-INCLUSIVE
+    print(my_list[4:]) # Prints ['o', '!'] --> item at index 4 INCLUSIVE to last index
+    # NEGATIVE INDEX is located from the end, back number of spots
+    print(my_list[-2:]) # Prints ['o', '!'] --> item at 4 until the end
+
+    # Remove the first 'l'
+    my_list.remove("l") # removes the first time it sees the character 'l'
+    # Insert an item at a index
+    my_list.insert(1, "l")
+    print(my_list) # Prints ['h', 'l', 'e', 'l', 'o', '!']
+
+# Note: Function that comes as a obj.function is a funciton ASSOCIATED with that object
+
+
+def tuple_demo(): 
+    print("***TUPLE DEMO****")
+
+def set_demo():
+    print("***SET DEMO***")
+
+def dict_demo():
+    print("***DICTIONARY DEMP***")
+
 
  # Optional requirments have to come AFTER the required requirments
 def bake_cookie(ingredients, instructions, temperature, cookie_cutter="snowman"): 
