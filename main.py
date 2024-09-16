@@ -50,12 +50,16 @@ def main():
     bake_cookie(ingredients_list, snickerdoodle_instructions, temp, cookie_cutter="teddybear")
 
     # Reviweing optional keyword arguments
+    print("***Calculations***")
     print(calculate_numbers(2, 3)) # goes with default, "add"
     # The next two lines both result in -1
     print(calculate_numbers(2, 3, "subtract")) 
     print(calculate_numbers(2, 3, operation = "subtract")) # if you specify keyword (specifiy which argument it is representing) the order wont matter
 
+    print()
+    
     # Demonstrate modifying values while iterating
+    print("***List Iterations***")
     numbers = [5, 5, 6, 5.5, 7, 42, 70, "hi"]
     # Note that you can mix different data types in the same list
     list_iteration(numbers) 
@@ -78,7 +82,6 @@ def bake_cookie(ingredients, instructions, temperature, cookie_cutter="snowman")
 
     # Tell them which cookie cutter to use
     print(f"* Now cut your cookies with a {cookie_cutter} cookie cutter", end="\n\n")
-
 
 
 def calculate_numbers(x, y, operation="add"):  
