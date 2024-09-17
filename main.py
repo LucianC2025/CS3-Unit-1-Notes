@@ -80,7 +80,7 @@ def list_demo():
     # Add an item to the list
     my_list.append("!")
     print(my_list) # Prints the entire list, exactly how it is written in code (except it prints single quotes instead of double quotes (what we used))
-    
+                                         
     # Get the number of items
     print(len(my_list)) # len function gives the NUMBER of items
 
@@ -97,14 +97,50 @@ def list_demo():
     my_list.insert(1, "l")
     print(my_list) # Prints ['h', 'l', 'e', 'l', 'o', '!']
 
+    # Check if a certain value exists in a list
+    # x in sequence - boolean expression
+    print("!" in my_list) # Prints True
+
+    # Sort our list in reverse order
+    # Sorts the list in "alphabetical" order backwards
+    # Symbol comes before the letter alphabet
+    my_list.sort(reverse = True)
+    print(my_list)
+
+
 # Note: Function that comes as a obj.function is a funciton ASSOCIATED with that object
 
 
-def tuple_demo(): 
+def tuple_demo():   
+    print()                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
     print("***TUPLE DEMO****")
+    # Tuples are IMMUTABLE
+    person = ('Courtney', 17, 'Brooklyn, NY')
+    name, age, hometown = person
+    print(name)
+    print(age)
+    print(hometown)
+     # Create multiple variables in one line
+
 
 def set_demo():
+    print()
     print("***SET DEMO***")
+    my_set = set()
+    my_set = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+    # SETS are MUTABLE
+    my_set.add(0) # will insert in ORDER! (SETS are ordered from least go greatest)
+    my_set.remove(4)
+    print(my_set)
+    # Sets can Only contain UNIQUE values
+    my_set.add(8)
+    print(my_set) # doesn't brake the program but ignores it
+
+    other_set = {2, 4, 6, 8, 10}
+    # Useful math operations between two sets
+    print(my_set.union(other_set)) 
+    print(my_set.intersection(other_set)) # prints what they HAVE in common
+    print(my_set.difference(other_set)) #pritns what they DONT have in common
 
 def dict_demo():
     print("***DICTIONARY DEMP***")
