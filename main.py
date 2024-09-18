@@ -140,11 +140,40 @@ def set_demo():
     # Useful math operations between two sets
     print(my_set.union(other_set)) 
     print(my_set.intersection(other_set)) # prints what they HAVE in common
-    print(my_set.difference(other_set)) #pritns what they DONT have in common
+    print(my_set.difference(other_set)) # prints what they DONT have in common
 
 def dict_demo():
+    print()
     print("***DICTIONARY DEMP***")
+    # { key: value, key: value, key: value}
+    # {1: "one"} 1 is the KEY; "one" is the VALUE
 
+    # Create a dictionary with values (each key has its own dict)
+    # Dictionary inside a dictionary
+    costumes = {
+        'M&M': {'pop %': 0.4, 'school OK': True, 'items': ['suit', 'white tights']},
+        'cat': {'pop %': 0.95, 'school OK': 'maybe', 'items': ['cat ears']},
+        'jorge': {'school OK': False, 'items': ['clown hammer']}
+    }
+
+    # How to print dictionaries
+    print ("Print Dictionaries...")
+    print(costumes) # prints exactly what we typed above
+    print()
+    print(costumes.items()) 
+    print()
+    print(costumes.values())
+    print()
+    print(costumes.keys()) # returns a LIST of the keys (outer ones only) 
+    
+    print()
+
+    # How to acess items
+    print("Acess & Print Items...")
+    print(costumes["jorge"])
+    print(costumes.get("cat"))
+    # print(costumes["Mr. Titcomb"]) --> doesn't exist results in a KeyError --> KeyError: 'Mr. Titcomb'
+     
 
  # Optional requirments have to come AFTER the required requirments
 def bake_cookie(ingredients, instructions, temperature, cookie_cutter="snowman"): 

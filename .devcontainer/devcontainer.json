@@ -1,7 +1,8 @@
 {
 	"extensions": [
 		"ms-python.python",
-		"fabiospampinato.vscode-monokai-night"
+
+		"formulahendry.code-runner"
 	]
 
 }
