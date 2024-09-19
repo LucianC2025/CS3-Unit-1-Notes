@@ -172,7 +172,30 @@ def dict_demo():
     print("Acess & Print Items...")
     print(costumes["jorge"])
     print(costumes.get("cat"))
+    # gives error if key doesn't exist
     # print(costumes["Mr. Titcomb"]) --> doesn't exist results in a KeyError --> KeyError: 'Mr. Titcomb'
+    print("Mr Titcomb" in costumes) 
+
+    # How to add items
+    costumes["Mr. Titcomb"] = { 'pop %': 1, 'school OK': True } 
+    
+    # Iterate throguh dictionary items 
+    print("📖ITERATE THORUGH DICTIONARY📖: ")
+
+    print("Iteration 1")
+    for costume in costumes:
+        print(costume) # prints the KEYS
+        print(costumes[costume])
+
+    print("Iteration 2")
+    for costume in costumes:
+        print(costumes.keys())
+        print(costumes.values())
+    
+    print("Iteration 3")
+    print("🔑Costume Keys🔑:")
+    for costume in costumes:
+        print(costume) # Prints the KEYS
      
 
  # Optional requirments have to come AFTER the required requirments

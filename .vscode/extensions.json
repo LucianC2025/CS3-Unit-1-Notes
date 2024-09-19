@@ -1,7 +1,6 @@
 {
 	"recommendations": [
-		"ms-python.python",
-		"fabiospampinato.vscode-monokai-night"
+		"ms-python.python"
 	],
 
 }

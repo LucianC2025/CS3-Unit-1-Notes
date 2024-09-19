@@ -1,7 +1,6 @@
 {
 	"extensions": [
 		"ms-python.python",
-
 		"formulahendry.code-runner"
 	]
 
